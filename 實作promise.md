@@ -1,4 +1,4 @@
-# promise-
+# promise
 實作promise
 ```javascript
 function Promise(fn) {
