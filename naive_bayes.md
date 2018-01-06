@@ -24,14 +24,14 @@ P\(d|c\)
 
 > 因為這樣要考慮的模型太過複雜(M+M^2+M^3+...+M^n，每次字出現的機率還要顧及上一個位置出現的機率)
 
-因此Naive Bayes提出了一個假設 "**conditional independence assumption**"
+因此Naive Bayes提出了一個假設 "**conditional independence assumption**"(其他word是否出現，不影響這個字的出現機率)
 因此P(d|c) = P(t1|c)P(t2|c)P(t3|c)...P(tn|c)
 **(  P(x1=chinese|c) != P(x3=chinese|c)  )**
 > 但這樣又有出現新的問題：
 (1) 我們無法事先得知文章的長度
 (2) 資料的稀疏性
 
-因此Naive Bayes提出了另一個假設 "**positional independence assumption**"
+因此Naive Bayes提出了另一個假設 "**positional independence assumption**"(不管在第幾個位置，不影響這個字的出現機率)
 這樣P(t1|c) = P(t2|c) = ... = P(tn|c)
 但也失去了字裡行間的順序，變為 **bag of words**
 e.g. Asus merged with Acer = Acer merged with Asus
